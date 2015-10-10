@@ -74,7 +74,7 @@ public class MacAddressPlugin extends CordovaPlugin {
         if (macAddress == null || macAddress.length() == 0) {
             macAddress = "00:00:00:00:00:00";
         }
-
+        System.out.println("mac address");
         return macAddress;
         
     }

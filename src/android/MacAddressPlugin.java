@@ -72,11 +72,11 @@ public class MacAddressPlugin extends CordovaPlugin {
         System.out.println("mac address");
         Log.d("MACAddress","hello");
 
-        String macAddress = null;
+        String macAddress = "";
         BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
         macAddress = ba.getAddress();
 
-        if (macAddress == null || macAddress.length() == 0) {
+        if (macAddress.equals("") || macAddress.length() == 0) {
             macAddress = "00:00:00:00:00:00";
         }
 

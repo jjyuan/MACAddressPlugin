@@ -18,7 +18,7 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="MacAddressPlugin">
-        <param name="android-package" value="com.badrit.MacAddress.MacAddressPlugin"/>
+        <param name="android-package" value="com.joshy.MacAddress.MacAddressPlugin"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">

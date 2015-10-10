@@ -68,8 +68,8 @@ public class MacAddressPlugin extends CordovaPlugin {
      */
     private String getMacAddress() {
         String macAddress = null;
-        BluetoothManager bm = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
-        macAddress = bm.getAdapter().getAddress();
+        BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
+        macAddress = ba.getAddress();
 
         if (macAddress == null || macAddress.length() == 0) {
             macAddress = "00:00:00:00:00:00";

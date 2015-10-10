@@ -11,6 +11,7 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 
 import android.bluetooth.BluetoothAdapter;
+import android.util.Log;
 
 /**
  * The Class MacAddressPlugin.
@@ -75,6 +76,7 @@ public class MacAddressPlugin extends CordovaPlugin {
             macAddress = "00:00:00:00:00:00";
         }
         System.out.println("mac address");
+        Log.d("MACAddress","hello");
         return macAddress;
         
     }

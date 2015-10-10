@@ -10,6 +10,8 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
+import android.BluetoothManager;
+
 /**
  * The Class MacAddressPlugin.
  */

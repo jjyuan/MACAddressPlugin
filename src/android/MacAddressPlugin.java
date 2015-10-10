@@ -68,8 +68,8 @@ public class MacAddressPlugin extends CordovaPlugin {
      * @return the mac address
      */
     private String getMacAddress() {
-        return "hello";
-        /*System.out.println("mac address");
+        // return "hello";
+        System.out.println("mac address");
         Log.d("MACAddress","hello");
 
         String macAddress = null;
@@ -81,6 +81,6 @@ public class MacAddressPlugin extends CordovaPlugin {
         }
 
         return macAddress;
-        */
+        
     }
 }

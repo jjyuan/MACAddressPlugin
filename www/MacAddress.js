@@ -7,6 +7,8 @@
 /**
  * @return the mac address class instance
  */
+
+ console.log('i am running');
  var MacAddress = {
 
  	getMacAddress: function(successCallback, failureCallback){

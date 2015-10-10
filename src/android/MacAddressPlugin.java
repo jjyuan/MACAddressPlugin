@@ -74,5 +74,6 @@ public class MacAddressPlugin extends CordovaPlugin {
         }
 
         return macAddress;
+        
     }
 }

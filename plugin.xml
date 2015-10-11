@@ -5,39 +5,39 @@
   id="com-badrit-macaddress"
   version="0.2.0">
   <name>MacAddress</name>
-  <description>Cordova MacAddress Plugin</description>
+  <description>Cordova Bluetooth Visibility Plugin</description>
   <license>Apache 2.0</license>
-  <keywords>cordova,MacAddress</keywords>
+  <keywords>cordova,bluetooth</keywords>
 
 
-  <js-module src="www/MacAddress.js" name="MacAddress">
-    <clobbers target="window.MacAddress" />
+  <js-module src="www/BtUtilities.js" name="BtUtilities">
+    <clobbers target="window.BtUtilities" />
   </js-module>
 
   <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="MacAddressPlugin">
-        <param name="android-package" value="com.joshy.MacAddress.MacAddressPlugin"/>
+      <feature name="BtVisibilityPlugin">
+        <param name="android-package" value="com.joshy.MacAddress.BtVisibilityPlugin"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.BLUETOOTH" />
     </config-file>
 
-    <source-file src="src/android/MacAddressPlugin.java" target-dir="src/com/badrit/MacAddress/" />
+    <source-file src="src/android/BtVisibilityPlugin.java" target-dir="src/com/badrit/MacAddress/" />
   </platform>
 
   <!-- ios -->
   <platform name="ios">
    <config-file target="config.xml" parent="/*">
-     <feature name="MacAddressPlugin">
-       <param name="ios-package" value="MacAddressPlugin" />
+     <feature name="BtVisibilityPlugin">
+       <param name="ios-package" value="BtVisibilityPlugin" />
      </feature>
    </config-file>
 
-   <header-file src="src/ios/MacAddressPlugin.h" />
-   <source-file src="src/ios/MacAddressPlugin.m" />
+   <header-file src="src/ios/BtVisibilityPlugin.h" />
+   <source-file src="src/ios/BtVisibilityPlugin.m" />
  </platform>
 
 </plugin>

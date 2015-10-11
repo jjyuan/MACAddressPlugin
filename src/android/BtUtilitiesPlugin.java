@@ -1,4 +1,7 @@
-package com.joshy.MacAddress;
+/*
+
+*/
+package com.joshy.BtUtilities.BtUtilitiesPlugin;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -16,7 +19,7 @@ import android.util.Log;
 /**
  * The Class MacAddressPlugin.
  */
-public class MacAddressPlugin extends CordovaPlugin {
+public class BtUtilitiesPlugin extends CordovaPlugin {
 
     public boolean isSynch(String action) {
         if (action.equals("getMacAddress")) {
@@ -62,25 +65,11 @@ public class MacAddressPlugin extends CordovaPlugin {
         return false;
     }
 
-    /**
-     * Gets the mac address.
-     * 
-     * @return the mac address
-     */
-    private String getMacAddress() {
-        // return "hello";
-        System.out.println("mac address");
-        Log.d("MACAddress","hello");
 
-        String macAddress = "";
-        BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
-        macAddress = ba.getAddress();
-
-        if (macAddress.equals("") || macAddress.length() == 0) {
-            macAddress = "00:00:00:00:00:00";
-        }
-
-        return macAddress;
-        
+    private boolean enableBtVisibility( ) {
+        Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE); //request user to turn on
+        discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180); //extends it
+        startActivity(discoverableIntent); //does it
+        return true;
     }
 }

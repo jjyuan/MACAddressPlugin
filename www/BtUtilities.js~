@@ -8,7 +8,6 @@
  * @return the mac address class instance
  */
 
- console.log('i am running');
  var MacAddress = {
 
  	getMacAddress: function(successCallback, failureCallback){
@@ -18,3 +17,13 @@
  };
 
  module.exports = MacAddress;
+
+ // what am i doing below here
+ var BtVisibility ={
+ 	setBtVisibility: function(successCallback, failureCallback){
+ 		cordova.exec(successCallback, failureCallback, 'BtVisibilityPlugin',
+ 			'enableBtVisibility', []);
+ 	}
+ };
+
+ module.exports = BtVisibility;
